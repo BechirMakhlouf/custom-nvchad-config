@@ -8,15 +8,18 @@ local servers = {
   "cssls",
   "tsserver",
   "clangd",
-  "intelephense",
+  -- "intelephense",
   "tailwindcss",
   "bashls",
   "emmet_ls",
   "marksman",
   "gopls",
   "pyright",
-  'awk_ls',
-  'jdtls',
+  "awk_ls",
+  "jdtls",
+  "angularls",
+  "prismals",
+  "sqlls",
 }
 
 for _, lsp in ipairs(servers) do

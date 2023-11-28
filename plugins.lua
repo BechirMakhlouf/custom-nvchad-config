@@ -73,12 +73,6 @@ local plugins = {
     end,
     lazy = false,
   },
-  {
-    "mfussenegger/nvim-jdtls",
-    config = function()
-      require("nvim-jdtls").setup {}
-    end,
-  },
   "mfussenegger/nvim-jdtls",
   -- {
   --   "mfussenegger/nvim-dap",

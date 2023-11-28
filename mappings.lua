@@ -10,7 +10,8 @@ M.general = {
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
 
     ["<leader>ss"] = {"<cmd>wa<CR>", "save all"},
-    ["<leader>sq"] = {"<cmd>wqa<CR>", "save quit all"},
+    ["<leader>sq"] = {"<cmd>wqa!<CR>", "save quit all"},
+    ["<leader>qq"] = {"<cmd>qa!<CR>", "quit all"},
   },
 }
 

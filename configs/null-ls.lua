@@ -25,6 +25,12 @@ local sources = {
 
   -- java
   b.formatting.google_java_format,
+
+  -- sql
+  b.formatting.sql_formatter,
+
+  -- go
+  b.formatting.gofumpt,
 }
 
 null_ls.setup {
