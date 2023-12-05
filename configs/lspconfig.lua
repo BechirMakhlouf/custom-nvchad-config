@@ -8,7 +8,6 @@ local servers = {
   "cssls",
   "tsserver",
   "clangd",
-  -- "intelephense",
   "tailwindcss",
   "bashls",
   "emmet_ls",
@@ -16,12 +15,17 @@ local servers = {
   "gopls",
   "pyright",
   "awk_ls",
-  "jdtls",
   "angularls",
   "prismals",
   "sqlls",
+  "phpactor",
+  "java_language_server",
+  "dockerls",
 }
-
+-- local config = {
+--     cmd = {'/path/to/jdt-language-server/bin/jdtls'},
+--     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+-- }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -29,5 +33,15 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig["java_language_server"].setup {
+  cmd = { "/home/copernicus/.local/share/nvim/mason/bin/java-language-server" },
+}
 -- lspconfig.pyright.setup { blabla}
 --
+
+-- local jdtlsConfig = {
+--   cmd = { "/usr/bin/jdtls" },
+--   root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+-- }
+--
+-- require("jdtls").start_or_attach(jdtlsConfig)

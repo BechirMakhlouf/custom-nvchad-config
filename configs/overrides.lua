@@ -18,6 +18,9 @@ M.treesitter = {
     "go",
     "java",
     "json",
+    "prisma",
+    "dockerfile",
+    "gomod",
   },
   indent = {
     enable = true,
@@ -45,6 +48,18 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    "bashls",
+    "emmet_ls",
+    "marksman",
+    "gopls",
+    "pyright",
+    "awk_ls",
+    "jdtls",
+    "angularls",
+    "prismals",
+    "sqlls",
+    "phpactor",
   },
 }
 

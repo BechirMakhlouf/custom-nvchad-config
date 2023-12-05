@@ -66,6 +66,20 @@ local plugins = {
       }
     end,
   },
+  -- {
+  --   "folke/flash.nvim",
+  --   event = "VeryLazy",
+  --   ---@type Flash.Config
+  --   opts = {},
+  -- -- stylua: ignore
+  -- keys = {
+  --   { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+  --   { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+  --   { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+  --   { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+  --   { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+  -- },
+  -- },
   {
     "ggandor/leap.nvim",
     config = function()
@@ -73,7 +87,25 @@ local plugins = {
     end,
     lazy = false,
   },
-  "mfussenegger/nvim-jdtls",
+  {
+    "mfussenegger/nvim-jdtls",
+    -- config = {
+    --   cmd = { "/path/to/jdt-language-server/bin/jdtls" },
+    --   root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+    --   require("jdtls").start_or_attach(config),
+    -- },
+    -- config = function()
+    -- local config = {
+    --   cmd = { "/home/copernicus/.local/share/nvim/mason/bin/jdtls" },
+    --   root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+    -- }
+
+    -- require("nvim-jdtls").setup {
+    --   cmd = { "/home/copernicus/.local/share/nvim/mason/bin/jdtls" },
+    --   root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" })[1]),
+    -- }
+    -- end,
+  },
   -- {
   --   "mfussenegger/nvim-dap",
   --   config = function()
@@ -83,12 +115,14 @@ local plugins = {
   --   end,
   --
   -- },
-  -- {
-  --   "nvim-telescope/telescope.nvim",
-  --   opts = {
-  --     -- ["hidden"] = true,
-  --   },
-  -- },
+  {
+    "nvim-telescope/telescope.nvim",
+
+    opts = {
+      file_ignore_patterns = { "node_modules", "vendor" },
+      -- ["hidden"] = true,
+    },
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
